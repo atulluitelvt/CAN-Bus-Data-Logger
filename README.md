@@ -4,35 +4,32 @@ CAN Bus Vehicle Data Logger
 
 ## Project Owner
 
-**Name:** Your Name  
-**Virginia Tech Email:** yourpid@vt.edu
+**Name:** Atul Luitel 
+**Virginia Tech Email:** atull@vt.edu
 
 ## Project Overview
 
-Provide a clear description of what you are building and the overall goal of the project.
-
-Include enough detail for someone unfamiliar with the project to understand what it does and why you are building it.
+A standalone logger that plugs into a car's OBD-II port, requests standard parameters (RPM, speed, coolant temperature) over CAN, decodes them, shows them on an LCD, and saves timestamped CSV rows to a microSD card. It is built on an Arduino Uno with an MCP2515 CAN module, a DS3231 RTC, and a custom PCB shield, and is tested in the lab with a simulated ECU.
 
 ## What I Hope to Learn
 
-Describe the technical skills, concepts, or experience you hope to gain from completing this project.
+CAN protocol: frames, IDs, bit timing, termination, OBD-II requests
+Embedded C: SPI/I2C, interrupts, ring buffers on 2 KB of RAM
+Decoding raw bytes into units and reliable SD logging
+PCB design in KiCad, from schematic to assembled board
+Measuring performance: frame loss, decode accuracy, log rate
 
 ## Design and Implementation
 
-Document the design of your project as it develops.
+<img width="757" height="255" alt="image" src="https://github.com/user-attachments/assets/44c5bead-33a6-4b49-9496-47b2ddd8b038" />
 
-This may include:
+Firmware loop: request PID (ID 0x7DF) → receive reply (0x7E8) → decode → timestamp → write CSV → update LCD.
 
-- Block diagrams
-- Circuit schematics
-- PCB designs
-- CAD models
-- Software architecture
-- Hardware selection
-- Calculations
-- Testing methods
+Key decisions
 
-Explain major design decisions and why you made them.
+Active PID requests (read-only), since many cars hide traffic behind a gateway.
+Interrupt-driven receive with a ring buffer so SD writes don't drop frames.
+Bench ECU simulator (second Arduino + MCP2515) for testing without a car.
 
 ## Bill of Materials
 
@@ -58,28 +55,16 @@ Outline the major stages of the project and update them as work progresses.
 
 ## Progress Log
 
-Use this section to document meaningful progress throughout the project.
+2026-10-17
 
+Scoped the project. Next: order parts and run the MCP2515 loopback test (check the module's crystal, 8 or 16 MHz).
 ### YYYY-MM-DD
-
-Describe what you worked on, what was completed, any problems you encountered, and what you plan to work on next.
 
 ## Project Files
 
-Organize and document important project files in this repository. Depending on the project, this may include:
-
-- Source code
-- KiCad files
-- Schematics
-- PCB layouts
-- CAD files
-- Datasheets
-- Test results
-- Documentation
 
 ## Useful Links
 
-Add any references, datasheets, documentation, tutorials, or other resources relevant to the project.
 
 ## Project Image
 
