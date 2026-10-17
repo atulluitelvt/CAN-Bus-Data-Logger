@@ -1,6 +1,6 @@
 # Project Name
 
-> Replace this title with the name of your project.
+CAN Bus Vehicle Data Logger
 
 ## Project Owner
 
