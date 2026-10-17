@@ -33,25 +33,32 @@ Bench ECU simulator (second Arduino + MCP2515) for testing without a car.
 
 ## Bill of Materials
 
-Document the major components and materials used for the project.
-
 | Item | Quantity | Estimated Cost | Link |
 |---|---:|---:|---|
-| Component | 1 | $0.00 | Link |
+| Arduino Uno R3 | 1 | $15.00 | Link |
+| MCP2515 CAN bus module | 1 | $8.00 | Link |
+| microSD card module | 1 | $6.00 | Link |
+| 16x2 LCD with I2C backpack | 1 | $9.00 | Link |
+| DS3231 RTC module | 1 | $7.00 | Link |
+| Breadboard and jumper wire pack | 1 | $8.00 | Link |
+| microSD card (8–32 GB) | 1 | $8.00 | Link |
+| OBD-II cable with open leads | 1 | $12.00 | Link |
+| 12 V to USB car power adapter | 1 | $8.00 | Link |
+| Bench ECU simulator node (Nano, MCP2515, potentiometers) | 1 | $15.00 | Link |
+| Custom PCB (5 boards from a fab house) | 1 | $10.00 | Link |
+| PCB parts (sockets, headers, termination resistor, fuse) | 1 | $8.00 | Link |
 
-**Estimated Total Cost:** $0.00
+**Estimated Total Cost:** $114.00
 
 ## Timeline and Milestones
 
-Outline the major stages of the project and update them as work progresses.
-
 | Milestone | Target Date | Status |
 |---|---|---|
-| Project planning | Date | Not Started |
-| Initial design | Date | Not Started |
-| Prototype | Date | Not Started |
-| Testing | Date | Not Started |
-| Project completion | Date | Not Started |
+| Project planning | Oct 23, 2026 | In Progress |
+| Initial design | Oct 30, 2026 | Not Started |
+| Prototype | Nov 13, 2026 | Not Started |
+| Testing | Nov 18, 2026 | Not Started |
+| Project completion | Nov 20, 2026 | Not Started |
 
 ## Progress Log
 
